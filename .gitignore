@@ -1,0 +1,32 @@
+# --- Secrets ---
+.env
+.env.*.local
+
+# --- Python / backend ---
+backend/.venv/
+backend/__pycache__/
+**/__pycache__/
+*.py[cod]
+backend/.pytest_cache/
+backend/.ruff_cache/
+backend/htmlcov/
+backend/.coverage
+
+# --- Node / frontend ---
+frontend/node_modules/
+frontend/.next/
+frontend/out/
+frontend/.turbo/
+npm-debug.log*
+
+# --- Uploaded/generated user files (runtime data, not source) ---
+backend/storage/
+
+# --- Docker ---
+*.pid
+
+# --- Editors / OS ---
+.DS_Store
+.idea/
+.vscode/
+*.swp

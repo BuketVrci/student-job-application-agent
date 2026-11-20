@@ -1,0 +1,11 @@
+const API_BASE_URL = process.env.NEXT_PUBLIC_API_BASE_URL ?? "http://localhost:8000";
+
+export async function getBackendHealth(): Promise<{ status: string } | null> {
+  try {
+    const response = await fetch(`${API_BASE_URL}/health`, { cache: "no-store" });
+    if (!response.ok) return null;
+    return response.json();
+  } catch {
+    return null;
+  }
+}
